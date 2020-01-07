@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Liverpool Busqueda</string>
+
+  <!-- liverpool busqueda -->
+    <string name="msg_criterio_busqueda">Ingresa criterio de busqueda</string>
+    <string name="msj_pagina_a_buscar">Ingresa el numero de pagina a buscar</string>
+    <string name="msj_buscar_producto">Buscar producto</string>
+    <string name="msj_sin_resultados">Sin resultados</string>
+    <string name="msj_cantidad_a_buscar">Cantidad a buscar</string>
+</resources>

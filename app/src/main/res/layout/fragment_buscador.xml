@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/morado"
+        tools:context=".busquedaLiverPool.BuscadorFragment">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCriterioBusqueda"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="27dp"
+            android:backgroundTint="@color/blanco"
+            android:hint="@string/msg_criterio_busqueda"
+            android:inputType="text"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNumeroItems"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="27dp"
+            android:backgroundTint="@color/blanco"
+            android:hint="@string/msj_cantidad_a_buscar"
+            android:inputType="number"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCriterioBusqueda">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNumeroPagina"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="27dp"
+            android:backgroundTint="@color/blanco"
+            android:hint="@string/msj_pagina_a_buscar"
+            android:inputType="number"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/blanco"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNumeroItems">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btBuscarProducto"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="27dp"
+            android:background="@drawable/btn_redondo_trasparente_blanco_generico"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/msj_buscar_producto"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNumeroPagina" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="408dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btBuscarProducto">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvResultadoBusqueda"
+                android:layout_width="409dp"
+                android:layout_height="392dp"
+                android:background="@color/moradoClaro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.103" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSinResultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msj_sin_resultados"
+                android:textAlignment="center"
+                android:textColor="@color/blanco"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
